@@ -10,11 +10,11 @@ Each file includes a realistic trigger scenario, a MITRE ATT&CK (or ATLAS, for t
 
 | # | Playbook | Domain | Primary Reference |
 |---|---|---|---|
-| 01 | [Credential Theft → Ransomware](./IR-Playbooks/01-credential-theft-ransomware.md) | Identity / Active Directory / EDR | MITRE ATT&CK — T1558.003 (Kerberoasting) |
-| 02 | [WAF/DDoS Data-Integrity Attack](./IR-Playbooks/02-waf-ddos-data-integrity.md) | Network edge / application security | MITRE ATT&CK — T1498, T1190 |
-| 03 | [CSPM Cloud Storage Exposure](./IR-Playbooks/03-cspm-cloud-exposure.md) | Cloud security posture | MITRE ATT&CK (Cloud) — T1530 |
-| 04 | [AI Governance: Prompt Injection](./IR-Playbooks/04-ai-governance-prompt-injection.md) | AI/LLM systems | MITRE ATLAS — AML.T0051 |
-| 05 | [TPRM: Third-Party Data-Partner Compromise](./IR-Playbooks/05-tprm-supply-chain.md) | Vendor / supply-chain risk | MITRE ATT&CK — T1199, T1195.002 |
+| 01 | [Credential Theft → Ransomware](./01-credential-theft-ransomware.md) | Identity / Active Directory / EDR | MITRE ATT&CK — T1558.003 (Kerberoasting) |
+| 02 | [WAF/DDoS Data-Integrity Attack](./02-waf-ddos-data-integrity.md) | Network edge / application security | MITRE ATT&CK — T1498, T1190 |
+| 03 | [CSPM Cloud Storage Exposure](./03-cspm-cloud-exposure.md) | Cloud security posture | MITRE ATT&CK (Cloud) — T1530 |
+| 04 | [AI Governance: Prompt Injection](./04-ai-governance-prompt-injection.md) | AI/LLM systems | MITRE ATLAS — AML.T0051 |
+| 05 | [TPRM: Third-Party Data-Partner Compromise](./05-tprm-supply-chain.md) | Vendor / supply-chain risk | MITRE ATT&CK — T1199, T1195.002 |
 
 ## Methodology
 
