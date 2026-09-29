@@ -15,6 +15,7 @@ Each file includes a realistic trigger scenario, a MITRE ATT&CK (or ATLAS, for t
 | 03 | [CSPM Cloud Storage Exposure](./03-cspm-cloud-exposure.md) | Cloud security posture | MITRE ATT&CK (Cloud) — T1530 |
 | 04 | [AI Governance: Prompt Injection](./04-ai-governance-prompt-injection.md) | AI/LLM systems | MITRE ATLAS — AML.T0051 |
 | 05 | [TPRM: Third-Party Data-Partner Compromise](./05-tprm-supply-chain.md) | Vendor / supply-chain risk | MITRE ATT&CK — T1199, T1195.002 |
+| 06 | [Root Cause Analysis: Session-Hijack](./06-root-cause-analysis-silent-suppression.md) | RAC/ Framework (CERT-In)| Session Hijack | Data Exfiltration |
 
 ## Methodology
 
@@ -51,6 +52,7 @@ This same guardrail architecture — evidence boundaries, explainable risk scori
     ├── 03-cspm-cloud-exposure.md
     ├── 04-ai-governance-prompt-injection.md
     └── 05-tprm-supply-chain.md
+    └── 06-root-cause-analysis-silent-suppression.md
 ```
 
 ## Notes on the scenarios
@@ -59,5 +61,5 @@ The organizations and incidents described are illustrative composites, not real 
 
 ---
 
-**Author:** Rahul Shrivastava — Cybersecurity / SOC Analyst
+**Author:** Rahul Shrivastava — Cybersecurity Engineer / SOC Analyst
 [Website](https://www.rahulshrivastava.co.in) · [LinkedIn](https://linkedin.com/in/shriv-rahul) · [GitHub](https://github.com/CdxDebian)
