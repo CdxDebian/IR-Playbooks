@@ -1,0 +1,547 @@
+{
+  "name": "IR-Playbooks \u2014 ATT&CK coverage",
+  "versions": {
+    "attack": "17",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques mapped in CdxDebian/IR-Playbooks (01\u201310). Score = number of playbooks covering the technique.",
+  "filters": {
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "IaaS",
+      "SaaS",
+      "Office Suite",
+      "Identity Provider",
+      "Network Devices",
+      "Containers"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "max",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "score": 1,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "score": 1,
+      "comment": "Playbook 02 \u2014 WAF/DDoS Data Integrity",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "02"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1199",
+      "tactic": "initial-access",
+      "score": 1,
+      "comment": "Playbook 05 \u2014 TPRM Supply Chain",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "05"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1195.002",
+      "tactic": "initial-access",
+      "score": 1,
+      "comment": "Playbook 05 \u2014 TPRM Supply Chain",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "05"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "score": 2,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware, 08 \u2014 SIEM Tuning",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01, 08"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "score": 2,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware, 08 \u2014 SIEM Tuning",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01, 08"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "score": 2,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware, 08 \u2014 SIEM Tuning",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01, 08"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "score": 2,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware, 08 \u2014 SIEM Tuning",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01, 08"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "initial-access",
+      "score": 1,
+      "comment": "Playbook 03 \u2014 CSPM Cloud Exposure",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "03"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "persistence",
+      "score": 1,
+      "comment": "Playbook 03 \u2014 CSPM Cloud Exposure",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "03"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "privilege-escalation",
+      "score": 1,
+      "comment": "Playbook 03 \u2014 CSPM Cloud Exposure",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "03"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "defense-evasion",
+      "score": 1,
+      "comment": "Playbook 03 \u2014 CSPM Cloud Exposure",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "03"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1098.001",
+      "tactic": "persistence",
+      "score": 1,
+      "comment": "Playbook 06 \u2014 RCA: Silenced Alert",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "06"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1098.001",
+      "tactic": "privilege-escalation",
+      "score": 1,
+      "comment": "Playbook 06 \u2014 RCA: Silenced Alert",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "06"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1562.001",
+      "tactic": "defense-evasion",
+      "score": 1,
+      "comment": "Playbook 08 \u2014 SIEM Tuning",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "08"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1562.002",
+      "tactic": "defense-evasion",
+      "score": 1,
+      "comment": "Playbook 10 \u2014 Telemetry Silence",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "10"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1562.006",
+      "tactic": "defense-evasion",
+      "score": 1,
+      "comment": "Playbook 10 \u2014 Telemetry Silence",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "10"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1562.008",
+      "tactic": "defense-evasion",
+      "score": 1,
+      "comment": "Playbook 10 \u2014 Telemetry Silence",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "10"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1070.001",
+      "tactic": "defense-evasion",
+      "score": 1,
+      "comment": "Playbook 10 \u2014 Telemetry Silence",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "10"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1550.004",
+      "tactic": "defense-evasion",
+      "score": 1,
+      "comment": "Playbook 06 \u2014 RCA: Silenced Alert",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "06"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1550.004",
+      "tactic": "lateral-movement",
+      "score": 1,
+      "comment": "Playbook 06 \u2014 RCA: Silenced Alert",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "06"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1110.003",
+      "tactic": "credential-access",
+      "score": 2,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware, 08 \u2014 SIEM Tuning",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01, 08"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1558.003",
+      "tactic": "credential-access",
+      "score": 1,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1539",
+      "tactic": "credential-access",
+      "score": 1,
+      "comment": "Playbook 06 \u2014 RCA: Silenced Alert",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "06"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1552.001",
+      "tactic": "credential-access",
+      "score": 1,
+      "comment": "Playbook 09 \u2014 Shadow AI",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "09"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1087",
+      "tactic": "discovery",
+      "score": 1,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "score": 1,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1526",
+      "tactic": "discovery",
+      "score": 1,
+      "comment": "Playbook 03 \u2014 CSPM Cloud Exposure",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "03"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "score": 1,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1213.003",
+      "tactic": "collection",
+      "score": 1,
+      "comment": "Playbook 06 \u2014 RCA: Silenced Alert",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "06"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1530",
+      "tactic": "collection",
+      "score": 1,
+      "comment": "Playbook 03 \u2014 CSPM Cloud Exposure",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "03"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1567",
+      "tactic": "exfiltration",
+      "score": 2,
+      "comment": "Playbook 06 \u2014 RCA: Silenced Alert, 09 \u2014 Shadow AI",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "06, 09"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1486",
+      "tactic": "impact",
+      "score": 1,
+      "comment": "Playbook 01 \u2014 Credential Theft \u2192 Ransomware",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "01"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1498",
+      "tactic": "impact",
+      "score": 1,
+      "comment": "Playbook 02 \u2014 WAF/DDoS Data Integrity",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "02"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1565.001",
+      "tactic": "impact",
+      "score": 2,
+      "comment": "Playbook 02 \u2014 WAF/DDoS Data Integrity, 05 \u2014 TPRM Supply Chain",
+      "enabled": true,
+      "showSubtechniques": true,
+      "metadata": [
+        {
+          "name": "playbooks",
+          "value": "02, 05"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#cfe9ff",
+      "#2563eb"
+    ],
+    "minValue": 1,
+    "maxValue": 2
+  },
+  "legendItems": [
+    {
+      "label": "Covered by 1 playbook",
+      "color": "#cfe9ff"
+    },
+    {
+      "label": "Covered by 2 playbooks",
+      "color": "#2563eb"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#0B1426",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false
+}
