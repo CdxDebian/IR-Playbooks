@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png" />
+    <img src="assets/banner-light.png" alt="Rahul Shrivastava — Security Operations Engineer" width="100%" />
+  </picture>
+</p>
+
 <div align="center">
 
 # Incident Response Playbooks
