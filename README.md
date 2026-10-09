@@ -239,11 +239,26 @@ The guardrail architecture used throughout — evidence boundaries, explainable 
 
 ---
 
+## Case Studies
+
+Real-world triage write-ups built from live threat-intel data — the analyst reasoning behind a verdict, not just the verdict.
+
+| # | Case study | Verdict | Key lesson |
+|:-:|---|---|---|
+| CS-01 | [When the "Malware" Is a Test File, but the Parent Might Not Be](./case-studies/01-eicar-file-reputation/README.md) — EICAR hash `275a021b…651fd0f`, VirusTotal reputation + relations analysis, L2 → L3 escalation ([PDF report](./case-studies/01-eicar-file-reputation/L3-escalation-report.pdf)) | True Positive — Benign (conditional) | 66/68 detections prove the control works; the risk sits in the 3.7K execution parents. Pivot to process lineage. |
+
+---
+
 ## Repository Structure
 
 ```
 .
 ├── README.md
+├── case-studies/
+│   └── 01-eicar-file-reputation/
+│       ├── README.md
+│       ├── iocs.csv
+│       └── L3-escalation-report.pdf
 ├── navigator/
 │   └── ir-playbooks-attack-layer.json
 └── playbooks/
