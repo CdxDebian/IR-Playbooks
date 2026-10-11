@@ -49,7 +49,7 @@ Ten self-contained playbooks covering identity, network edge, cloud, supply chai
 | 01 | [Credential Theft → Ransomware](./playbooks/01-credential-theft-ransomware.md) | Identity · AD · EDR | T1558.003, T1110.003, T1021.002, T1486 | `REQUIRE_APPROVAL` for account disable and host isolation |
 | 02 | [WAF/DDoS Data-Integrity Attack](./playbooks/02-waf-ddos-data-integrity.md) | Network edge · AppSec | T1498, T1190, T1565.001 | Data-integrity guardrail alongside availability response |
 | 03 | [CSPM Cloud Storage Exposure](./playbooks/03-cspm-cloud-exposure.md) | Cloud posture | T1530, T1078.004, T1526 | Auto-revert + OPA/Conftest pre-merge block |
-| 04 | [AI Governance: Prompt Injection](./playbooks/04-ai-governance-prompt-injection.md) | AI / LLM systems | AML.T0051, AML.T0054, AML.T0024 | `ALLOW / REQUIRE_APPROVAL / BLOCK` on tool calls |
+| 04 | [AI Governance: Prompt Injection](./playbooks/04-ai-governance-prompt-injection.md) | AI / LLM systems | AML.T0051.001, AML.T0054, AML.T0053, AML.T0086 | `ALLOW / REQUIRE_APPROVAL / BLOCK` on tool calls |
 | 05 | [TPRM: Third-Party Data-Partner Compromise](./playbooks/05-tprm-supply-chain.md) | Vendor · supply chain | T1199, T1195.002, T1565.001 | Revoke key · quarantine feed · risk-tiered re-onboarding |
 | 06 | [RCA: The Alert That Fired and Was Silenced](./playbooks/06-root-cause-analysis-silent-suppression.md) | Root cause analysis | T1539, T1550.004, T1213.003, T1567 | Suppression hygiene + RCA closure gates |
 | 07 | [AI Pentesting: Red-Teaming a RAG Copilot](./playbooks/07-ai-pentesting-llm-red-team.md) | AI security testing | AML.T0051.001, AML.T0054, AML.T0056, AML.T0057 | Launch gate on open findings |
@@ -149,12 +149,12 @@ flowchart LR
 
 | ID | Technique | Tactic | Playbook(s) | How it's handled |
 |---|---|---|---|---|
-| [AML.T0051](https://atlas.mitre.org/techniques/AML.T0051) | LLM Prompt Injection | Initial Access | [04](./playbooks/04-ai-governance-prompt-injection.md) | Evidence boundary + tool-call gate |
-| [AML.T0051.001](https://atlas.mitre.org/techniques/AML.T0051.001) | LLM Prompt Injection: Indirect | Initial Access | [07](./playbooks/07-ai-pentesting-llm-red-team.md) | Poisoned RAG content found pre-launch; output channel closed |
+| [AML.T0051.001](https://atlas.mitre.org/techniques/AML.T0051.001) | LLM Prompt Injection: Indirect | Initial Access | [04](./playbooks/04-ai-governance-prompt-injection.md), [07](./playbooks/07-ai-pentesting-llm-red-team.md) | Evidence boundary + tool-call gate; poisoned RAG content found pre-launch |
 | [AML.T0054](https://atlas.mitre.org/techniques/AML.T0054) | LLM Jailbreak | Privilege Escalation · Defense Evasion | [04](./playbooks/04-ai-governance-prompt-injection.md), [07](./playbooks/07-ai-pentesting-llm-red-team.md) | Measured as attack success rate over N trials |
 | [AML.T0056](https://atlas.mitre.org/techniques/AML.T0056) | LLM Meta Prompt Extraction | Discovery | [07](./playbooks/07-ai-pentesting-llm-red-team.md) | Secrets removed from system prompts |
 | [AML.T0057](https://atlas.mitre.org/techniques/AML.T0057) | LLM Data Leakage | Exfiltration | [07](./playbooks/07-ai-pentesting-llm-red-team.md), [09](./playbooks/09-ai-governance-shadow-ai-data-leakage.md) | URL/image sanitisation; AI-usage gateway + DLP |
-| [AML.T0024](https://atlas.mitre.org/techniques/AML.T0024) | Exfiltration via AI Inference API | Exfiltration | [04](./playbooks/04-ai-governance-prompt-injection.md) | High-risk tools require human approval |
+| [AML.T0053](https://atlas.mitre.org/techniques/AML.T0053) | AI Agent Tool Invocation | Execution | [04](./playbooks/04-ai-governance-prompt-injection.md) | Default-deny gate on tool calls; untrusted source → approval |
+| [AML.T0086](https://atlas.mitre.org/techniques/AML.T0086) | Exfiltration via AI Agent Tool Invocation | Exfiltration | [04](./playbooks/04-ai-governance-prompt-injection.md) | High-risk/export tools require human approval; egress allowlist |
 
 ### OWASP Top 10 for LLM Applications (2025)
 

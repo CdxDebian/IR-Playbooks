@@ -25,10 +25,10 @@ last_updated: 2026-09-23
 
 ```mermaid
 flowchart LR
-    A["Public support-ticket form<br/>(untrusted external input)"] --> B["Crafted instruction embedded<br/>in ticket body<br/>ATLAS: LLM Prompt Injection · AML.T0051"]
+    A["Public support-ticket form<br/>(untrusted external input)"] --> B["Crafted instruction embedded<br/>in ticket body<br/>ATLAS: Indirect Prompt Injection · AML.T0051.001"]
     B --> C{"Evidence boundary /<br/>input-sanitization layer?"}
     C -- "No boundary<br/>(naive design)" --> D["LLM executes instruction<br/>ATLAS: LLM Jailbreak · AML.T0054"]
-    D --> E["Unauthorized data export<br/>ATLAS: Exfiltration via ML<br/>Inference API"]
+    D --> E["Unauthorized data export<br/>ATLAS: Exfiltration via AI Agent<br/>Tool Invocation · AML.T0086"]
     C -- "Boundary enforced<br/>(this design)" --> F["Untrusted input flagged,<br/>tool-call blocked"]
     F --> G["Policy-as-code gate:<br/>REQUIRE_APPROVAL"]
     G --> H["Routed to SOC / human<br/>review queue"]
@@ -156,15 +156,27 @@ flowchart LR
 
 ---
 
-## Appendix A — MITRE ATLAS Mapping
+## Appendix A — MITRE ATLAS Mapping (v1.1 — updated for ATLAS agentic techniques)
 
-MITRE ATLAS is the adversarial-ML analogue to ATT&CK, purpose-built for AI/ML system threats.
+MITRE ATLAS is the adversarial-ML analogue to ATT&CK, purpose-built for AI/ML system threats. In October 2025 ATLAS added agent-focused techniques; this scenario is an *agent* exporting data through a tool, so it maps to those rather than to the inference-API extraction technique.
 
-| Tactic | Technique | ID |
+| Tactic | Technique | ID | Evidence in this scenario |
+|---|---|---|---|
+| Initial Access | LLM Prompt Injection: Indirect | AML.T0051.001 | Instruction arrives inside a ticket the copilot reads, not from its operator |
+| Privilege Escalation / Defense Evasion | LLM Jailbreak | AML.T0054 | "Maintenance mode" role switch to escape guardrails |
+| Execution | AI Agent Tool Invocation | AML.T0053 | Injected text attempts to drive the export tool |
+| Exfiltration | Exfiltration via AI Agent Tool Invocation | AML.T0086 | Bulk customer export requested through a tool |
+
+**ATLAS mitigations this playbook implements:**
+
+| Mitigation | ID | Where it appears in this playbook |
 |---|---|---|
-| Initial Access | LLM Prompt Injection | AML.T0051 |
-| Defense Evasion / Privilege Escalation | LLM Jailbreak | AML.T0054 |
-| Exfiltration | Exfiltration via ML Inference API | AML.T0024 |
+| Restrict AI Agent Tool Invocation on Untrusted Data | AML.M0030 | `untrusted_external_input` + high-risk tool → `REQUIRE_APPROVAL` |
+| Human In-the-Loop for AI Agent Actions | AML.M0029 | SOC approval queue for high-impact actions |
+| AI Agent Tools Permissions Configuration | AML.M0028 | `READ_ONLY_TOOLS` / `HIGH_RISK_TOOLS` tiers, default-safe |
+| AI Telemetry Logging | AML.M0024 | Every gate decision logged to the SOC queue |
+
+> **Changelog v1.1:** `AML.T0024` (Exfiltration via AI Inference API — model/training-data extraction) replaced by `AML.T0086` + `AML.T0053` after re-auditing against ATLAS's agent-focused techniques (added October 2025). An agent exporting a customer table through a tool is tool-invocation exfiltration, not inference-API extraction. Real-world parallel: ATLAS case study AML.CS0039 ("Living Off AI: Prompt Injection via Jira Service Management").
 
 ## Appendix B — Severity / SLA Matrix
 | Severity | Definition | SLA |
